@@ -1,0 +1,6 @@
+
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/lincoln1/public_html/portal/
+    - /bin/cp -R * $DEPLOYPATH
