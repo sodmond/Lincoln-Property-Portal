@@ -46,7 +46,7 @@ class HomeController extends Controller
     public function index()
     {
         $totalRef = Customer::all()->count();
-        $todayRef = Customer::whereRaw("DATE(created_at) = date('Y-m-d')")->count();
+        $todayRef = Customer::whereRaw("DATE(created_at) = CURDATE()")->count();
         $directRef = ((Customer::where('ref_by', 11111111)->count()) * 100) / $totalRef;
         $totalAdmin = User::all()->count();
         $topUserByRef = Customer::selectRaw('DISTINCT ref_by, COUNT(ref_by) as freq')->groupBy('ref_by')->limit(8)->get();
