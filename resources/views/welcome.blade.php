@@ -77,6 +77,8 @@
 
                 <div>
                     <a href="{{ url('/sign-up') }}"><button type="button" class="btn btn-primary">Sign Up</button></a>
+                    &nbsp;
+                    <a href="{{ url('/home') }}"><button type="button" class="btn btn-primary">Admin</button></a>
                 </div>
             </div>
         </div>
