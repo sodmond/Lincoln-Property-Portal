@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Customer;
+use App\Mail\CustomerDetails;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 class CustomerController extends Controller
@@ -67,6 +69,7 @@ class CustomerController extends Controller
         $customer = Customer::insertGetId($valData);
         if ($customer) {
             $ref_link = url('/sign-up/'.$customer.'-'.$valData['ref_code']);
+            Mail::to($valData['email'])->send(new CustomerDetails($valData, $ref_link));
             $suc_msg = "Form submitted successfully. See your referral link below:";
             return view('/sign-up', ['suc_msg' => $suc_msg, 'ref_link' => $ref_link]);
         }
