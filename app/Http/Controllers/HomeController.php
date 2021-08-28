@@ -50,6 +50,9 @@ class HomeController extends Controller
         $directRef = ((Customer::where('ref_by', 11111111)->count()) * 100) / $totalRef;
         $totalAdmin = User::all()->count();
         $topUserByRef = Customer::selectRaw('DISTINCT ref_by, COUNT(ref_by) as freq')->groupBy('ref_by')->limit(8)->get();
+        $gender = [];
+        $gender['male'] = Customer::where('gender', 'male')->count();
+        $gender['female'] = Customer::where('gender', 'female')->count();
         $recentRef = Customer::selectRaw('*')->orderByDesc('created_at')->limit(10)->get();
         return view('dashboard.home', [
             'totalRef'              => $totalRef,
@@ -57,6 +60,7 @@ class HomeController extends Controller
             'directRef'             => $directRef,
             'totalAdmin'            => $totalAdmin,
             'totalUserByRef'        => $this->getRefName($topUserByRef),
+            'gender'                => $gender,
             'recentRef'             => $recentRef,
         ]);
     }

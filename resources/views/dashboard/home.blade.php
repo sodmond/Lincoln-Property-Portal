@@ -104,6 +104,10 @@
                 <h6 class="m-0 font-weight-bold text-dark">Referrals by Gender</h6>
             </div>
             <div class="card-body">
+                <div>
+                    <input type="hidden" id="male" value="{{ $gender['male'] }}">
+                    <input type="hidden" id="female" value="{{ $gender['female'] }}">
+                </div>
                 <div class="chart-pie pt-4 pb-2">
                     <div class="chartjs-size-monitor">
                         <div class="chartjs-size-monitor-expand">
@@ -113,7 +117,7 @@
                             <div class=""></div>
                         </div>
                     </div>
-                    <canvas id="myPieChart" style="display: block; width: 301px; height: 245px;" class="chartjs-render-monitor" width="301" height="245"></canvas>
+                    <canvas id="genderChart" style="display: block; width: 301px; height: 245px;" class="chartjs-render-monitor" width="301" height="245"></canvas>
                 </div>
                 <div class="mt-4 text-center small">
                     <span class="mr-2">
