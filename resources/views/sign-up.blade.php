@@ -104,18 +104,22 @@
                                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                         <input type="hidden" name="ref_by" value="{{ $res_code ?? '11111111' }}">
                                         <div class="form-group">
+                                            <label for="email" style="font-weight:600;">Email:</label>
                                             <input type="email" class="form-control" name="email" id="email" placeholder="Email*" required readonly>
                                         </div>
                                         <div class="form-group row">
                                             <div class="col">
+                                                <label for="fname" style="font-weight:600;">Firstname:</label>
                                                 <input type="text" class="form-control" name="fname" id="fname" placeholder="Firstname*" required>
                                             </div>
                                             <div class="col">
+                                                <label for="lname" style="font-weight:600;">Lastname:</label>
                                                 <input type="text" class="form-control" name="lname" id="lname" placeholder="Lastname*" required>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <div class="col">
+                                                <label for="gender" style="font-weight:600;">Gender:</label>
                                                 <select class="form-control" id="gender" name="gender">
                                                     <option value=""> - - - Select Gender - - - </option>
                                                     <option value="male">Male</option>
@@ -123,28 +127,35 @@
                                                 </select>
                                             </div>
                                             <div class="col">
+                                                <label for="dob" style="font-weight:600;">Date of Birth:</label>
                                                 <input type="date" class="form-control" name="dob" id="dob" placeholder="Date Of Birth*" required>
                                             </div>
                                         </div>
                                         <div class="form-group">
+                                            <label for="phone" style="font-weight:600;">Phone:</label>
                                             <input type="number" class="form-control" name="phone" id="phone" placeholder="Phone*" required>
                                         </div>
                                         <div class="form-group row">
                                             <div class="col">
+                                                <label for="state" style="font-weight:600;">State:</label>
                                                 <input type="text" class="form-control" name="state" id="state" placeholder="State*" required>
                                             </div>
                                             <div class="col">
+                                                <label for="country" style="font-weight:600;">Country:</label>
                                                 <input type="text" class="form-control" name="country" id="country" placeholder="Country*" required>
                                             </div>
                                         </div>
                                         <div class="form-group">
+                                            <label for="acct_name" style="font-weight:600;">Account Name:</label>
                                             <input type="text" class="form-control" name="acct_name" id="acct_name" placeholder="Account Name*" required>
                                         </div>
                                         <div class="form-group row">
                                             <div class="col">
+                                                <label for="bank_name" style="font-weight:600;">Bank Name:</label>
                                                 <input type="text" class="form-control" name="bank_name" id="bank_name" placeholder="Bank Name*" required>
                                             </div>
                                             <div class="col">
+                                                <label for="acct_num" style="font-weight:600;">Account Number:</label>
                                                 <input type="number" class="form-control" name="acct_num" id="acct_num" placeholder="Account Number*" required>
                                             </div>
                                         </div>
