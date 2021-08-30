@@ -36,7 +36,8 @@ class ReferralController extends Controller
     {
         if (isset($id)) {
             $user = Customer::find($id);
-            return view('dashboard.user_profile', ['profile' => $user]);
+            $myRef = Customer::where('ref_by', $user->ref_code)->paginate(10);
+            return view('dashboard.user_profile', ['profile' => $user, 'myRef' => $myRef]);
         }
         return redirect('/referral_list');
     }

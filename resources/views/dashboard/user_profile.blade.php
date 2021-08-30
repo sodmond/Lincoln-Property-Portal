@@ -105,4 +105,53 @@
         </div>
     </div>
 </div>
+
+<div class="row">
+    <div class="col-md-12 mb-4">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-dark">Referral List</h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Referral ID</th>
+                                <th>Full Name</th>
+                                <th>Email</th>
+                                <th>Gender</th>
+                                <th>Country</th>
+                                <th>Referred By</th>
+                                <th>Date</th>
+                                <th>...</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($myRef as $ref)
+                            <tr>
+                                <td>{{ $ref->ref_code }}</td>
+                                <td>{{ $ref->firstname.' '.$ref->lastname }}</td>
+                                <td>{{ $ref->email }}</td>
+                                <td>{{ $ref->gender }}</td>
+                                <td>{{ $ref->country }}</td>
+                                <td>{{ $ref->ref_by }}</td>
+                                <td>{{ $ref->created_at }}</td>
+                                <td>
+                                    <a href='{{url("/user_profile/$ref->id")}}'>
+                                        <button class="btn btn-info btn-sm">
+                                            <i class="fas fa-eye fa-sm"></i>
+                                        </button>
+                                    </a>
+                                </td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row justify-content-center">{{ $myRef->links() }}</div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection

@@ -32,7 +32,7 @@
             </div>
             <div class="card-body">
                 <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-md-12">
                         <div class="table-responsive">
                             <table class="table">
                                 <thead>
@@ -60,7 +60,7 @@
                                         <td>
                                             <a href='{{url("/user_profile/$ref->id")}}'>
                                                 <button class="btn btn-info btn-sm">
-                                                    <i class="fas fa-eye fa-sm"></i> View
+                                                    <i class="fas fa-eye fa-sm"></i>
                                                 </button>
                                             </a>
                                         </td>

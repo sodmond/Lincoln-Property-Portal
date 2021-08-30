@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Sign Up - Lincoln City Portal</title>
+        <title>Sign Up - Lincoln City Business Network Portal</title>
 
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -56,7 +56,7 @@
                         <div class="card-body content">
                             <div class="row" style="text-align: center;">
                                 <div class="col">
-                                    <h1>Lincoln Business Network</h1>
+                                    <h1>Lincoln City Business Network</h1>
                                     <div>&nbsp;</div>
                                     <h2 style="font-size:24px;">Register for free</h2>
                                 </div>

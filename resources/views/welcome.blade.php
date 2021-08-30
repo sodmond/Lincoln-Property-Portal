@@ -72,7 +72,7 @@
             <div class="content">
                 <a href="{{url('/')}}"><img src="{{ asset('img/logo.png') }}" alt=""></a>
                 <div class="title m-b-md">
-                    Lincoln Business Network Portal
+                    Lincoln City<br>Business Network Portal
                 </div>
 
                 <div>
