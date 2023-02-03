@@ -22,7 +22,7 @@ Auth::routes();
 
 Route::get('/sign-up', 'CustomerController@index')->name('sign-up');
 Route::get('/sign-up/{ref_id}', 'CustomerController@index')->name('referral');
-Route::get('checkCust/{email}', 'CustomerController@checkCust')->name('check.customer');
+Route::get('/check_cust/{email}', 'CustomerController@checkCust')->name('check.customer');
 Route::post('/sign-up', 'CustomerController@store');
 
 Route::get('/home', 'HomeController@index')->name('home');

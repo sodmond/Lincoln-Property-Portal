@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Validator;
 class CustomerController extends Controller
 {
     public $code;
-    
+
     public function __construct() {
         $code = rand(11111112, 999999999);
         $this->code = $code;
@@ -32,7 +32,7 @@ class CustomerController extends Controller
     {
         $cust = Customer::where('email', $email)->first();
         if ($cust) {
-            return response()->json(['cust' => $cust->toArray()]);
+            return response()->json(['cust' => $cust->toArray()], 200);
         }
         return response()->json(['error' => "No record found!"]);
     }
