@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Validator;
 
 class CustomerController extends Controller
 {
+    public $code;
+    
     public function __construct() {
         $code = rand(11111112, 999999999);
         $this->code = $code;
