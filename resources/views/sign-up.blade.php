@@ -185,7 +185,6 @@
                     var email = $('#chk-email').val();
                     $('#chk-email-btn').attr('disabled');
                     $('#email-chckin').css('display', 'block');
-                    alert($('#chk-email-url').val() + '/' + email);
                     $.ajax({
                         type: 'GET',
                         url: 'check_cust/' + email,
