@@ -162,7 +162,7 @@
                     </div>
                 </div>
                 <div class="col-md-2">
-                    &nbsp; <input type="hidden" id="chk-email-url" value="{{ url('/') }}">
+                    &nbsp; <input type="hidden" id="chk-email-url" value="{{ url('/checkCust') }}">
                 </div>
             </div>
         </div>
@@ -187,7 +187,7 @@
                     $('#email-chckin').css('display', 'block');
                     $.ajax({
                         type: 'GET',
-                        url: $('#chk-email-url').val() + '/checkCust/' + email,
+                        url: 'checkCust/' + email,
                         success: function(data){
                             if ($.isEmptyObject(data.error)) {
                                 alert('Oops! Email not available');
