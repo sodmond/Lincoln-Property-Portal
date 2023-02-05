@@ -162,7 +162,7 @@
                     </div>
                 </div>
                 <div class="col-md-2">
-                    &nbsp; <input type="hidden" id="chk-email-url" value="{{ url('/check_cust') }}">
+                    &nbsp; <input type="hidden" id="chk-email-url" value="{{ url('/') }}">
                 </div>
             </div>
         </div>
