@@ -187,7 +187,7 @@
                     $('#email-chckin').css('display', 'block');
                     $.ajax({
                         type: 'GET',
-                        url: 'check_cust/' + email,
+                        url: $('#chk-email-url').val() + '/check_cust/' + email,
                         success: function(data){
                             if ($.isEmptyObject(data.error)) {
                                 alert('Oops! Email not available');
